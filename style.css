@@ -1,0 +1,168 @@
+/* Custom Properties */
+:root {
+    --clr--soft-blue: hsl(215, 51%, 70%);
+    --clr--cyan: hsl(178, 100%, 50%);
+    --clr--cyan-opacity: hsla(178, 100%, 50%, 0.5);
+
+    --clr--background-container: hsl(217, 54%, 11%);
+    --clr--background-card: hsl(216, 50%, 16%);
+    --clr--dark-blue: hsl(215, 32%, 27%);
+    --clr--white: hsl(0, 0%, 100%);
+
+    --fs--regular: 1.125rem;
+    --ff--outfit: 'Outfit', sans-serif;
+    --fw--light: 300;
+    --fw--regular: 400;
+    --fw--semibold: 600;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--clr--background-container);
+    color: var(--clr--soft-blue);
+    font-family: var(--ff--outfit);
+    font-size: var(--fs--regular);
+    font-weight: var(--fw--light);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+
+.card {
+    background-color: var(--clr--background-card);
+    padding: 1rem;
+    border-radius: 25px;
+    max-width: 22rem;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr--cyan-opacity);
+    display: none;
+}
+
+
+.image-overlay img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-wrapper:hover .image-overlay {
+    display: block;
+    cursor: pointer;
+}
+
+.content {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.heading {
+    color: var(--clr--white);
+    font-weight: var(--fw--semibold);
+    font-size: 1.5rem
+}
+
+.heading:where(:hover, :focus) {
+    cursor: pointer;
+    color: var(--clr--cyan);
+    transition: .5s ease;
+}
+
+.market {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.price {
+    display: flex;
+    gap: .5rem;
+}
+
+.icon-ethereum {
+    width: 1rem;
+}
+
+.ethureum {
+    color: var(--clr--cyan);
+}
+
+.timer {
+    display: flex;
+    gap: .5rem;
+}
+
+.icon-clock {
+    width: 1.6rem;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--clr--dark-blue);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 0;
+}
+
+.creator-image {
+    width: 2.6rem;
+    border: 1px solid var(--clr--white);
+    border-radius: 50%;
+}
+
+.name {
+    color: var(--clr--white);
+}
+
+.name:where(:hover, :focus) {
+    cursor: pointer;
+    color: var(--clr--cyan);
+    transition: .5s ease;
+}
