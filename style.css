@@ -58,7 +58,9 @@ body {
     background-color: var(--clr--background-card);
     padding: 1rem;
     border-radius: 25px;
+    /* width: 22rem; */
     max-width: 22rem;
+    /* margin-top: 4rem; */
 }
 
 .image-wrapper {
@@ -165,4 +167,18 @@ hr {
     cursor: pointer;
     color: var(--clr--cyan);
     transition: .5s ease;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .card{
+        max-width: 24rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card {
+        max-width: 26rem;
+    }
 }
